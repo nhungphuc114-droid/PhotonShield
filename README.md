@@ -20,7 +20,6 @@ We don't just "see" drones; we lock onto their optical souls.
 ---
 
 ## 🛠️ Technical Architecture (技术架构)
-<img width="1408" height="768" alt="反监视" src="https://github.com/user-attachments/assets/1eb6e8e7-8304-4bbd-8b2d-920f9b68d6b1" />
 
 This is a **Solid-State Optical Array**. No moving parts, zero CV latency.
 
