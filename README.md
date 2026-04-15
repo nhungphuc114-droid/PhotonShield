@@ -108,7 +108,31 @@ This project is licensed under **CERN-OHL-S v2 (Strongly Reciprocal)**.
 
 ### The Fusion of Digital Periscope & Active Cat-Eye Detection
 
-(这里贴入我刚才给你的那段英文逻辑...)
+The Physics: A Fusion of Digital Periscope & Active Cat-Eye Detection
+The core of Project Argus lies in a lethal combination of two optical principles, upgraded for the 21st century.
+
+1. The "Digital Periscope" Logic (Coaxial Alignment)
+Traditional surveillance is passive. Project Argus turns the table by using a Coaxial Optical Path.
+
+The Principle: By aligning the VCSEL emitter and the SPAD detector on the exact same optical axis, we create a "Digital Periscope."
+
+The Advantage: Whatever the system "sees," it is already "aiming" at. At a distance of 5km, even a 0.1-degree misalignment means missing the target by meters. Our coaxial architecture eliminates parallax error entirely, ensuring that the return signal from a tiny drone lens is captured with surgical precision.
+
+2. The "Active Cat-Eye" Logic (Retroreflection)
+Every camera lens—whether on a $500 DJI drone or a $10,000 telephoto setup—acts like a cat's eye.
+
+The Phenomenon: When our encoded laser hits a remote CMOS sensor, the light is reflected back directly to the source along the incident path (Retroreflection).
+
+The "Argus" Upgrade: We don't just look for a reflection; we use SPAD (Single-Photon Avalanche Diode) to detect individual photons returning from 5km away. By using TCSPC (Time-Correlated Single Photon Counting), we can identify a hidden lens even if it’s tucked behind a tinted car window or deep in a forest, as long as it has a line of sight.
+
+🚀 Real-World Applications
+This isn't just for anti-drone warfare. Because the physics of retroreflection is universal, the PhotonShield can be deployed for:
+
+Privacy Shields for Vehicles: Detecting dashboard cameras or tailing vehicles in real-time.
+
+Industrial Counter-Espionage: Identifying long-range telephoto lenses aiming at sensitive factory floors from distant hills.
+
+Autonomous Perimeter Security: A "set and forget" tile that alerts you the moment any optical sensor "looks" at your property.
 
 </details>
 
