@@ -98,3 +98,18 @@ This project is licensed under **CERN-OHL-S v2 (Strongly Reciprocal)**.
 * **License:** This project is licensed under **CERN-OHL-S v2**. (See the `LICENSE` file for full text).
 * **Reciprocity:** If you modify the hardware or firmware, you **MUST** share the improvements under the same license.
 * **Disclaimer:** Project Argus is for **privacy defense and educational purposes only**. Users are responsible for complying with local radio and laser safety regulations.
+
+---
+
+## 🔬 Deep Dive: The "Periscope + Cat-Eye" Synergy
+
+<details>
+<summary><b>Click to expand the core physics behind 5km detection</b></summary>
+
+### The Fusion of Digital Periscope & Active Cat-Eye Detection
+
+(这里贴入我刚才给你的那段英文逻辑...)
+
+</details>
+
+---
