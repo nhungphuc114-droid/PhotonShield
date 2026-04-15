@@ -60,35 +60,39 @@ This project is licensed under **CERN-OHL-S v2 (Strongly Reciprocal)**.
 
 ---
 
-## 核心物理逻辑：为什么这套系统能打 5 公里？ (Technical Manifesto)
+## ⚡ Core Physics: Why This System Reaches 5km? (Technical Manifesto)
 
-很多勇士会质疑 5km 的可行性。作为架构师，我在此公开本项目的**三大物理支柱**，欢迎全球极客进行链路推算：
+Skeptics may question the feasibility of a 5km range. As the architect, I am disclosing the **Three Physical Pillars** of Project Argus. We welcome global experts to verify these link budget assumptions:
 
-### 1. 为什么 5km 还有信号？ (单光子探测)
-普通的 CMOS 传感器在 5km 处无法感光，但我们采用 **SPAD (单光子雪崩二极管)**。
-* **物理事实：** 只要有一个光子撞击，SPAD 就能产生探测电流。
-* **算法加持：** 配合 **TCSPC (时间相关单光子计数)**，我们在 5km 的背景噪声中寻找的是“时间相关性”。即使回波只有几个光子，只要它们符合我们的激光脉冲编码序列，系统就能报警。
+### 1. Sensitivity: Signal Acquisition at 5km (Single-Photon Detection)
+Standard CMOS sensors fail at extreme ranges due to the inverse square law. We bypass this limit using **SPAD (Single-Photon Avalanche Diode)** technology.
+* **The Physics:** A single returning photon is sufficient to trigger an avalanche current.
+* **Algorithmic Edge:** By employing **TCSPC (Time-Correlated Single Photon Counting)**, we don't look for an "image." We look for **temporal correlation**. Even if only a handful of photons return from 5km, as long as they match our encoded pulse sequence, the system will lock on.
 
-### 2. 为什么能精准锁定？ (同轴光路 + MLA)
-* **MLA (微透镜阵列):** 我们不使用单一的大透镜，而是使用集成微透镜将 VCSEL 激光束发散角压缩至 **0.5 mrad**。
-* **同轴 (Coaxial):** 发射器和接收器共用中心轴线。5km 之外，差之毫秒失之千里。同轴设计确保了我们“看”到的地方就是“光”打到的地方，消除了视差。
 
-### 3. 为什么能防太阳光干扰？ (窄门控技术)
-* **纳秒级门控:** 系统只在激光发出的那几个纳秒内开启接收器。
-* **窄带滤波:** 配合 850nm 窄带滤光片。
-* **结果:** 我们只听“自己发出的回声”，对太阳光和背景噪声免疫。
+
+### 2. Precision: Zero Parallax & Beam Stealth (Coaxial + MLA)
+* **MLA (Microlens Array):** Instead of crude bulk optics, we use integrated microlens arrays to compress the VCSEL divergence to **<0.5 mrad**. 
+* **Coaxial Architecture:** The emitter and receiver share the exact same optical axis. At 5km, even a 0.01° offset is fatal. Our coaxial design ensures "What we see is what we illuminate," eliminating parallax errors and maximizing retroreflective return.
+
+
+
+### 3. Immunity: Defeating Solar Background (Nano-Gating)
+* **Nanosecond Gating:** The receiver window is only active for a few nanoseconds, precisely timed to the pulse's Time-of-Flight (ToF).
+* **Narrowband Filtering:** Utilizing 850nm/940nm interference filters (FWHM <10nm).
+* **Result:** The system ignores incoherent solar noise, focusing exclusively on the "echo" of our own PRN-encoded signal.
 
 ---
 
-## 🛡️ 勇士行动指南 (Warrior's Call to Action)
+## 🛡️ Warrior's Call to Action (Contributor Guidelines)
 
-由于本项目目前处于 **架构公示阶段 (Arch-Release Phase)**，我直接在 README 中招募：
+Project Argus is currently in the **Arch-Release Phase**. We are recruiting the first wave of "Warriors" to bridge the gap between concept and silicon:
 
-- **硬件组:** 谁能把概念图里的 SPAD 偏置电路画成 KiCad 原理图？
-- **算法组:** 谁能写出第一段针对 ESP32 或 FPGA 的伪随机脉冲相关代码？
-- **光学组:** 谁能用 Zemax 仿真一下 MLA 在 5km 处的弥散圆直径？
+- **Hardware Cell:** Who can translate the conceptual SPAD bias circuit into a production-ready KiCad schematic?
+- **Algorithm Cell:** Who can write the first PRN (Pseudo-Random Noise) correlation code for ESP32-S3 or FPGA?
+- **Optical Cell:** Who can run a Zemax simulation to calculate the spot size (circle of confusion) of our MLA array at 5km?
 
-**请直接在 Issues 中留言，或通过 Pull Request 提交你的改进草图。**
+**Leave a comment in the Issues or submit your design drafts via Pull Request.**
 
 <img width="1408" height="768" alt="反监视" src="https://github.com/user-attachments/assets/2c6b143e-c21a-4375-b177-486da1b5fd37" />
 
