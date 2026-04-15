@@ -92,3 +92,11 @@ This project is licensed under **CERN-OHL-S v2 (Strongly Reciprocal)**.
 **请直接在 Issues 中留言，或通过 Pull Request 提交你的改进草图。**
 
 <img width="1408" height="768" alt="反监视" src="https://github.com/user-attachments/assets/2c6b143e-c21a-4375-b177-486da1b5fd37" />
+
+---
+
+## ⚖️ License & Disclaimer (协议与免责)
+
+* **License:** This project is licensed under **CERN-OHL-S v2**. (See the `LICENSE` file for full text).
+* **Reciprocity:** If you modify the hardware or firmware, you **MUST** share the improvements under the same license.
+* **Disclaimer:** Project Argus is for **privacy defense and educational purposes only**. Users are responsible for complying with local radio and laser safety regulations.
