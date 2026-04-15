@@ -1,6 +1,6 @@
 This project aims to restore the balance of privacy and safety in environments where aerial surveillance leads to direct kinetic threats."
 
-# Project Argus: Open-Source Optical Shielding 🛡️
+# Project Argus: Open-Source Optical Shielding
 
 **"If the sky is watching, we are the ones who blink back."**
 
@@ -60,7 +60,7 @@ This project is licensed under **CERN-OHL-S v2 (Strongly Reciprocal)**.
 
 ---
 
-## ⚡ Core Physics: Why This System Reaches 5km? (Technical Manifesto)
+## Core Physics: Why This System Reaches 5km? (Technical Manifesto)
 
 Skeptics may question the feasibility of a 5km range. As the architect, I am disclosing the **Three Physical Pillars** of Project Argus. We welcome global experts to verify these link budget assumptions:
 
@@ -84,7 +84,7 @@ Standard CMOS sensors fail at extreme ranges due to the inverse square law. We b
 
 ---
 
-## 🛡️ Warrior's Call to Action (Contributor Guidelines)
+## Warrior's Call to Action (Contributor Guidelines)
 
 Project Argus is currently in the **Arch-Release Phase**. We are recruiting the first wave of "Warriors" to bridge the gap between concept and silicon:
 
@@ -94,11 +94,11 @@ Project Argus is currently in the **Arch-Release Phase**. We are recruiting the 
 
 **Leave a comment in the Issues or submit your design drafts via Pull Request.**
 
-<img width="1408" height="768" alt="反监视" src="https://github.com/user-attachments/assets/2c6b143e-c21a-4375-b177-486da1b5fd37" />
+<img width="1408" height="768" alt="system" src="https://github.com/user-attachments/assets/2c6b143e-c21a-4375-b177-486da1b5fd37" />
 
 ---
 
-## ⚖️ License & Disclaimer (协议与免责)
+## License & Disclaimer
 
 * **License:** This project is licensed under **CERN-OHL-S v2**. (See the `LICENSE` file for full text).
 * **Reciprocity:** If you modify the hardware or firmware, you **MUST** share the improvements under the same license.
@@ -106,7 +106,7 @@ Project Argus is currently in the **Arch-Release Phase**. We are recruiting the 
 
 ---
 
-## 🔬 Deep Dive: The "Periscope + Cat-Eye" Synergy
+## Deep Dive: The "Periscope + Cat-Eye" Synergy
 
 <details>
 <summary><b>Click to expand the core physics behind 5km detection</b></summary>
@@ -145,7 +145,7 @@ Autonomous Perimeter Security: A "set and forget" tile that alerts you the momen
 
 ---
 
-## 🛠️ Technical Roadmap & Initial BOM (Draft v0.1)
+## Technical Roadmap & Initial BOM (Draft v1.0)
 
 To move from architecture to a functional Proof of Concept (PoC), we are prioritizing the following component selection. We invite hardware engineers and optical physicists to review and challenge these specs in the Issues section.
 
@@ -165,7 +165,7 @@ To move from architecture to a functional Proof of Concept (PoC), we are priorit
 
 ---
 
-## 🚀 Active Workstreams (Immediate Help Needed)
+## Active Workstreams (Immediate Help Needed)
 
 We are officially opening the following workstreams for contributors:
 
