@@ -20,6 +20,7 @@ We don't just "see" drones; we lock onto their optical souls.
 ---
 
 ## 🛠️ Technical Architecture (技术架构)
+<img width="1408" height="768" alt="反监视" src="https://github.com/user-attachments/assets/1eb6e8e7-8304-4bbd-8b2d-920f9b68d6b1" />
 
 This is a **Solid-State Optical Array**. No moving parts, zero CV latency.
 
@@ -58,3 +59,23 @@ This project is licensed under **CERN-OHL-S v2 (Strongly Reciprocal)**.
 3.  Join our developer group (Link in DM/Issues).
 
 **"Privacy is a human right. Physics is our weapon."**
+
+
+# Project Argus 🛡️
+
+## ## 1. 系统概念架构 (System Conceptual Architecture)
+
+这是我们实现 1.5km-5km 梯度防御的**核心物理逻辑**。
+
+![Project Argus Conceptual Schematic](images/conceptual_schematic.png)
+
+### 🧩 核心架构模块解析：
+1.  **同轴 VCSEL-MLA 发射端 (Coaxial Emitter):** * 采用 **850nm VCSEL 阵列**，配合集成微透镜 (MLA) 实现超低发散角（<0.5 mrad）。
+    * **核心创新：** 发射与接收光轴**完全重合（同轴）**。这消除了 5km 处的视差误差，并实现了“发现即瞄准”。
+2.  **SPAD 单光子接收端 (SPAD Receiver):**
+    * 使用 **SPAD (单光子雪崩二极管) 阵列**，具有近乎无穷大的增益，专门捕获 5km 处回弹的极微弱光子。
+    * **信号路径：** SPAD -> 超高速比较器 -> FPGA (LVDS)。
+3.  **FPGA 信号处理核心 (Signal Processing Core):**
+    * **TCSPC (时间相关单光子计数) 算法：** 在时间域上对脉冲进行互相关累积，把目标从太阳噪声中“拔”出来。
+    * **PRN (伪随机序列) 编码：** 激光不是乱闪，是有密码的，从而实现 5km 链路的身份验证。
+<img width="1408" height="768" alt="反监视" src="https://github.com/user-attachments/assets/2c6b143e-c21a-4375-b177-486da1b5fd37" />
