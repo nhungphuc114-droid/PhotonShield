@@ -1,5 +1,7 @@
 This project aims to restore the balance of privacy and safety in environments where aerial surveillance leads to direct kinetic threats."
 
+If you are struggling with FPV threats that DCNN/YOLO cannot detect beyond 500m, this is for you. We use SPAD to reach 5km. No AI bullsh*t, just pure physics.
+
 
 # Project Argus: Open-Source Optical Shielding
 
