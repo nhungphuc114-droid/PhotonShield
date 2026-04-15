@@ -59,22 +59,36 @@ This project is licensed under **CERN-OHL-S v2 (Strongly Reciprocal)**.
 
 **"Privacy is a human right. Physics is our weapon."**
 
+---
 
-# Project Argus 🛡️
+## ⚡ 核心物理逻辑：为什么这套系统能打 5 公里？ (Technical Manifesto)
 
-## ## 1. 系统概念架构 (System Conceptual Architecture)
+很多勇士会质疑 5km 的可行性。作为架构师，我在此公开本项目的**三大物理支柱**，欢迎全球极客进行链路推算：
 
-这是我们实现 1.5km-5km 梯度防御的**核心物理逻辑**。
+### 1. 为什么 5km 还有信号？ (单光子探测)
+普通的 CMOS 传感器在 5km 处无法感光，但我们采用 **SPAD (单光子雪崩二极管)**。
+* **物理事实：** 只要有一个光子撞击，SPAD 就能产生探测电流。
+* **算法加持：** 配合 **TCSPC (时间相关单光子计数)**，我们在 5km 的背景噪声中寻找的是“时间相关性”。即使回波只有几个光子，只要它们符合我们的激光脉冲编码序列，系统就能报警。
 
-![Project Argus Conceptual Schematic](images/conceptual_schematic.png)
+### 2. 为什么能精准锁定？ (同轴光路 + MLA)
+* **MLA (微透镜阵列):** 我们不使用单一的大透镜，而是使用集成微透镜将 VCSEL 激光束发散角压缩至 **0.5 mrad**。
+* **同轴 (Coaxial):** 发射器和接收器共用中心轴线。5km 之外，差之毫秒失之千里。同轴设计确保了我们“看”到的地方就是“光”打到的地方，消除了视差。
 
-### 🧩 核心架构模块解析：
-1.  **同轴 VCSEL-MLA 发射端 (Coaxial Emitter):** * 采用 **850nm VCSEL 阵列**，配合集成微透镜 (MLA) 实现超低发散角（<0.5 mrad）。
-    * **核心创新：** 发射与接收光轴**完全重合（同轴）**。这消除了 5km 处的视差误差，并实现了“发现即瞄准”。
-2.  **SPAD 单光子接收端 (SPAD Receiver):**
-    * 使用 **SPAD (单光子雪崩二极管) 阵列**，具有近乎无穷大的增益，专门捕获 5km 处回弹的极微弱光子。
-    * **信号路径：** SPAD -> 超高速比较器 -> FPGA (LVDS)。
-3.  **FPGA 信号处理核心 (Signal Processing Core):**
-    * **TCSPC (时间相关单光子计数) 算法：** 在时间域上对脉冲进行互相关累积，把目标从太阳噪声中“拔”出来。
-    * **PRN (伪随机序列) 编码：** 激光不是乱闪，是有密码的，从而实现 5km 链路的身份验证。
+### 3. 为什么能防太阳光干扰？ (窄门控技术)
+* **纳秒级门控:** 系统只在激光发出的那几个纳秒内开启接收器。
+* **窄带滤波:** 配合 850nm 窄带滤光片。
+* **结果:** 我们只听“自己发出的回声”，对太阳光和背景噪声免疫。
+
+---
+
+## 🛡️ 勇士行动指南 (Warrior's Call to Action)
+
+由于本项目目前处于 **架构公示阶段 (Arch-Release Phase)**，我直接在 README 中招募：
+
+- **硬件组:** 谁能把概念图里的 SPAD 偏置电路画成 KiCad 原理图？
+- **算法组:** 谁能写出第一段针对 ESP32 或 FPGA 的伪随机脉冲相关代码？
+- **光学组:** 谁能用 Zemax 仿真一下 MLA 在 5km 处的弥散圆直径？
+
+**请直接在 Issues 中留言，或通过 Pull Request 提交你的改进草图。**
+
 <img width="1408" height="768" alt="反监视" src="https://github.com/user-attachments/assets/2c6b143e-c21a-4375-b177-486da1b5fd37" />
