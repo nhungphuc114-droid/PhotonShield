@@ -137,3 +137,35 @@ Autonomous Perimeter Security: A "set and forget" tile that alerts you the momen
 </details>
 
 ---
+
+---
+
+## 🛠️ Technical Roadmap & Initial BOM (Draft v0.1)
+
+To move from architecture to a functional Proof of Concept (PoC), we are prioritizing the following component selection. We invite hardware engineers and optical physicists to review and challenge these specs in the Issues section.
+
+### 1. Optical Emission (The Illuminator)
+* **Light Source:** 850nm / 940nm High-Power VCSEL Array (Pulse Power >10W).
+* **Driver Topology:** GaN-based FET drivers for sub-5ns rise times to ensure high spatial resolution.
+* **Collimation:** Initial testing via aspheric condensers; target transition to **Integrated Microlens Arrays (MLA)** for <0.5 mrad divergence.
+
+### 2. Detection Stack (The Quantum Receiver)
+* **Sensor:** Exploring **SPAD (Single-Photon Avalanche Diode)** discrete components or CMOS-integrated SPAD arrays (e.g., STMicro FlightSense or Hamamatsu Silicon PMs).
+* **Filtering:** Ultra-narrowband interference filters (FWHM <10nm) centered at the emitter wavelength to suppress solar background noise.
+* **Signal Path:** High-speed Transimpedance Amplifiers (TIA) → Ultra-fast Comparators → FPGA LVDS inputs.
+
+### 3. Logic & Processing (The Core)
+* **Phase 1 (Validation):** **ESP32-S3** utilizing RMT/I2S peripherals for synchronized PRN pulse generation and basic gated windowing.
+* **Phase 2 (Scalability):** **Xilinx Zynq / Artix-7 FPGA** for real-time Time-Correlated Single Photon Counting (TCSPC) and multi-channel correlation.
+
+---
+
+## 🚀 Active Workstreams (Immediate Help Needed)
+
+We are officially opening the following workstreams for contributors:
+
+- [ ] **Link Budget Analysis:** We need a rigorous verification of the SNR at 5km considering the retroreflection cross-section of a standard 25mm CMOS lens.
+- [ ] **Coaxial Optical Housing:** Designing a 3D-printable chassis that maintains sub-millimeter alignment between the emitter and the receiver.
+- [ ] **PRN Sequence Design:** Optimization of Pseudo-Random Noise sequences to improve signal-to-noise ratios in high-ambient-light environments.
+
+**"The physics is sound. The components are available. Let's build the shield."**
