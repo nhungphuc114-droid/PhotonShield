@@ -28,8 +28,6 @@ This is a **Solid-State Optical Array**. No moving parts, zero CV latency.
 * **Logic:** PRN (Pseudo-Random Noise) encoding + Time-Correlated Single Photon Counting (TCSPC) to pull signals out of solar noise.
 * **Anti-Surveillance:** Coaxial optical path design allows for immediate laser dazzle/blind once a lens is confirmed.
 
-
-
 ---
 
 ## ⚔️ Call for Warriors (寻找勇士)
