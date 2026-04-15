@@ -1,3 +1,4 @@
+This project aims to restore the balance of privacy and safety in environments where aerial surveillance leads to direct kinetic threats."
 
 # Project Argus: Open-Source Optical Shielding 🛡️
 
@@ -9,7 +10,7 @@ Project Argus is a decentralized, open-source hardware initiative to build a sol
 
 ---
 
-## 🛰️ Performance Tiers (性能指标)
+## Performance Tiers 
 
 We don't just "see" drones; we lock onto their optical souls.
 
@@ -19,7 +20,7 @@ We don't just "see" drones; we lock onto their optical souls.
 
 ---
 
-## 🛠️ Technical Architecture (技术架构)
+## 🛠️ Technical Architecture 
 
 This is a **Solid-State Optical Array**. No moving parts, zero CV latency.
 
@@ -30,7 +31,7 @@ This is a **Solid-State Optical Array**. No moving parts, zero CV latency.
 
 ---
 
-## ⚔️ Call for Warriors (寻找勇士)
+## Call for Warriors 
 
 We are looking for experts to move from **Architecture** to **Action**:
 
@@ -41,7 +42,7 @@ We are looking for experts to move from **Architecture** to **Action**:
 
 ---
 
-## 📜 License
+## License
 
 This project is licensed under **CERN-OHL-S v2 (Strongly Reciprocal)**. 
 
@@ -49,7 +50,7 @@ This project is licensed under **CERN-OHL-S v2 (Strongly Reciprocal)**.
 
 ---
 
-## 🚀 Get Started
+##  Get Started
 
 1.  Check the `/Hardware` folder for initial schematics.
 2.  Read the `/Whitepaper` for the link-budget calculations at 5km.
@@ -59,7 +60,7 @@ This project is licensed under **CERN-OHL-S v2 (Strongly Reciprocal)**.
 
 ---
 
-## ⚡ 核心物理逻辑：为什么这套系统能打 5 公里？ (Technical Manifesto)
+## 核心物理逻辑：为什么这套系统能打 5 公里？ (Technical Manifesto)
 
 很多勇士会质疑 5km 的可行性。作为架构师，我在此公开本项目的**三大物理支柱**，欢迎全球极客进行链路推算：
 
