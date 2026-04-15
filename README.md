@@ -1,8 +1,9 @@
 This project aims to restore the balance of privacy and safety in environments where aerial surveillance leads to direct kinetic threats."
 
+
 # Project Argus: Open-Source Optical Shielding
 
-**"If the sky is watching, we are the ones who blink back."**
+"If the sky is watching, we are the ones who blink back."
 
 Project Argus is a decentralized, open-source hardware initiative to build a solid-state optical radar. Our mission is to detect and neutralize intrusive UAV surveillance using the **Cat-eye Retroreflection effect**.
 
@@ -14,13 +15,13 @@ Project Argus is a decentralized, open-source hardware initiative to build a sol
 
 We don't just "see" drones; we lock onto their optical souls.
 
-* **🟢 1.0km - 1.5km (The Shield):** Real-time, high-confidence detection of consumer-grade CMOS sensors. Instant lock-on.
-* **🟡 1.5km - 3.0km (The Watcher):** Reliable tracking of professional/industrial UAVs using TCSPC algorithms.
-* **🔴 3.0km - 5.0km (The Horizon):** Limit detection for early warning against long-range tactical surveillance.
+* 🟢 1.0km - 1.5km (The Shield):** Real-time, high-confidence detection of consumer-grade CMOS sensors. Instant lock-on.
+* 🟡 1.5km - 3.0km (The Watcher):** Reliable tracking of professional/industrial UAVs using TCSPC algorithms.
+* 🔴 3.0km - 5.0km (The Horizon):** Limit detection for early warning against long-range tactical surveillance.
 
 ---
 
-## 🛠️ Technical Architecture 
+## Technical Architecture 
 
 This is a **Solid-State Optical Array**. No moving parts, zero CV latency.
 
