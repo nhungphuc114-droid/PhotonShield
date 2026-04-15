@@ -175,3 +175,7 @@ We are officially opening the following workstreams for contributors:
 - [ ] **PRN Sequence Design:** Optimization of Pseudo-Random Noise sequences to improve signal-to-noise ratios in high-ambient-light environments.
 
 **"The physics is sound. The components are available. Let's build the shield."**
+
+### FPV Specific Defense (Optimization)
+- **High-Speed Scanning:** FPVs move fast. We need to optimize the SPAD array's scanning frequency to ensure zero-miss in high-dynamic scenarios.
+- **Directional Alert:** Integrate a simple compass/IMU module to provide a "Clock Position" (e.g., "FPV at 2 o'clock, 4.5km").
